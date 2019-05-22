@@ -176,7 +176,7 @@ dependencies:
   - r-munsell=0.5.0=r351h6115d3f_1001
   - r-nlme=3.1_139=r351h9bbef5b_0
   - r-openssl=1.3=r351h9c8475f_0
-  - r-pillar=1.3.1=r351h6115d3f_1000
+  - r-pillar=1.4.0
   - r-pkgconfig=2.0.2=r351h6115d3f_1001
   - r-plogr=0.2.0=r351h6115d3f_1001
   - r-plyr=1.8.4=r351h29659fb_1002
