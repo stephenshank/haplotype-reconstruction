@@ -1,8 +1,10 @@
 import React from "react";
 import ReactDOM from "react-dom";
 import "bootstrap";
+import { BAMViewer } from "alignment.js";
 
 import "./bootstrap.min.css";
+require("../node_modules/alignment.js/lib/alignment.css");
 
 
 function Link(props) {
@@ -46,11 +48,13 @@ function Navbar(props) {
 function App() {
   return (<div>
     <Navbar>
+      <Link text="Mapped Reads" />
       <Link text="Error Correction" />
       <Link text="Read Graph" />
       <Link text="Haplotype Reconstruction" />
     </Navbar>
     <div style={{ maxWidth: 1140 }} className="container-fluid">
+      <BAMViewer data_url="sorted.bam" />
     </div>
   </div>);
 }

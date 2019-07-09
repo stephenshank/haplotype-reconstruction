@@ -22,3 +22,5 @@ compartmentalization.json
 .ipynb_checkpoints
 *.jar
 tags*
+.yalc
+yalc.lock
