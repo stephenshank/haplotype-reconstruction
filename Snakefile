@@ -784,7 +784,7 @@ rule covarying_truth_comparison:
 rule superreads:
   input:
     alignment=rules.sort_and_index.output.bam,
-    covarying_sites=rules.call_variants.output[0],
+    covarying_sites=rules.covarying_sites.output.json
   output:
     json="output/{dataset}/{qc}/{read_mapper}/{reference}/superseal/superreads.json",
     superread_start="output/{dataset}/{qc}/{read_mapper}/{reference}/superseal/times/sr_start.txt",
