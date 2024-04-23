@@ -162,7 +162,7 @@ def write_ar_dataset(
         for lanl_id in lanl_ids
     ]
     sam_infos = [get_sam_info(sam) for sam in sams]
-    number_of_ar_reads = np.ceil(ar*number_of_reads).astype(np.int)
+    number_of_ar_reads = np.ceil(ar*number_of_reads).astype(int)
     number_of_clean_reads = number_of_reads - number_of_ar_reads
     read_counts = (number_of_clean_reads, number_of_ar_reads)
     print('Simulating %d pure reads, %d recombined...' % read_counts)
@@ -173,7 +173,7 @@ def write_ar_dataset(
     ar_left_indices = np.random.choice(
         number_of_clean_reads, 2*number_of_ar_reads, replace=False
     )
-    ar_right_strains = np.zeros(2*number_of_ar_reads, dtype=np.int)
+    ar_right_strains = np.zeros(2*number_of_ar_reads, dtype=int)
     if should_recombine:
         for i in range(number_of_strains):
             other_strains = [j for j in range(number_of_strains) if j != i]
